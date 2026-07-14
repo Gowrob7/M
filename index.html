@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Player</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:linear-gradient(135deg,#141E30,#243B55);
+}
+
+.player{
+    width:320px;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+h2{
+    color:white;
+    margin-bottom:20px;
+}
+
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:#00C853;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    background:#00E676;
+}
+
+button:active{
+    transform:scale(.95);
+}
+</style>
+</head>
+
+<body>
+
+<div class="player">
+    <h2> Motivational Speech 🗣️ </h2>
+
+    <button onclick="playSong()">▶Listen</button>
+
+    <audio id="mySong">
+        <source src="w.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+<script>
+function playSong(){
+    document.getElementById("mySong").play();
+}
+</script>
+
+</body>
+</html>
